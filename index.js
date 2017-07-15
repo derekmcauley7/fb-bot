@@ -44,19 +44,14 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         let text = event.message.text
         if (text === 'Generic') {
-            sendGenericMessage(sender)
+            sendTextMessage(sender, "Thank you, for your Message: " + text.substring(0, 200))
             continue
         }
           else if (text.includes("website") ||  text.includes('Website')) {
-              sendTextMessage(sender, "Hi I'm a Wonderful Websites Bot, if you're looking for a new website. " + "You can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
+              sendTextMessage(sender, "This is a bot in your message you said Website. " + "You can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
+              continue
           }
-          
-          else if (text.includes('price' || text.includes'cost')){
-              sendTextMessage(sender, "Hi I'm a Wonderful Websites Bot, " + "the price of a website depends on what is required, you can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
-          }
-          else{
-        sendTextMessage(sender, "Hi I'm a Wonderful Websites Bot, I have no programmed reply for your Message: " + text.substring(0, 200) + ". Someone will reply soon.")
-        }
+        
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
