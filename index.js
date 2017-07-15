@@ -50,10 +50,6 @@ app.post('/webhook/', function (req, res) {
           else if (text.includes("website") ||  text.includes('Website')) {
               sendTextMessage(sender, "This is a bot in your message you said Website. " + "You can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
           }
-          
-          else if (text.includes('price' || 'cost')){
-              sendTextMessage(sender, "This is a bot built by wonderful websites " + "The price of a website depsnds on what is required, you can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
-          }
         sendTextMessage(sender, "Thank you, for your Message: " + text.substring(0, 200))
       }
       if (event.postback) {
