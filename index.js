@@ -52,12 +52,12 @@ app.post('/webhook/', function (req, res) {
               continue
           }          
           
-          else if (text.includes("price") ||  text.includes('cost')) {
-              sendTextMessage(sender, "This is a bot. " + "You can find out about our E-commerce Website Design here  https://wonderfulwebsites.ie/E-Commerce-Website-Design-Dublin.html" )
+          else if (text.includes("price") ||  text.includes('sell')) {
+              sendTextMessage(sender, "This is a bot. " + "If you're looking to buy and sell products online, you can find out more about our E-commerce Website Design here  https://wonderfulwebsites.ie/E-Commerce-Website-Design-Dublin.html" )
               continue
           }
           else{
-              sendTextMessage(sender, "Thank you, for your Message: " + text.substring(0, 200))
+              sendTextMessage(sender, "Thank you, I am a bot. I dont have a reply for for your Message: " + text.substring(0, 200) + ". Someone will contact you soon.")
             continue
               
           }
