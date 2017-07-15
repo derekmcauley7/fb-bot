@@ -25,10 +25,10 @@ app.get('/', function (req, res) {
 
 // Facebook Webhook
 app.get('/webhook/', function (req, res) {
-    if (req.query['hub.verify_token'] === vtoken) {
+    if (req.query['hub.verify_token'] === token) {
         res.send(req.query['hub.challenge'])
     }
-    res.send(vtoken)
+    res.send(token)
 })
 
 // Server log and port
