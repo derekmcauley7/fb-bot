@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
 
 // Facebook Webhook
 app.get('/webhook/', function (req, res) {
-    if (req.query['hub.verify_token'] === token) {
+    if (req.query['hub.verify_token'] === vtoken) {
         res.send(req.query['hub.challenge'])
     }
     res.send('Hello...')
