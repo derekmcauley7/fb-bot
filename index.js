@@ -52,10 +52,10 @@ app.post('/webhook/', function (req, res) {
           }
           
           else if (text.includes('price' || text.includes'cost')){
-              sendTextMessage(sender, "This is a bot built by wonderful websites " + "The price of a website depends on what is required, you can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
+              sendTextMessage(sender, "This is a bot built by wonderful websites " + "The price of a website depsnds on what is required, you can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
           }
           else{
-        sendTextMessage(sender, "This is a Wonderful Websites Boot.  Thank you, for your Message: " + text.substring(0, 200) + '. I dont have a built response, someone will contact you soon')
+        sendTextMessage(sender, "Thank you, for your Message: " + text.substring(0, 200))
         }
       }
       if (event.postback) {
