@@ -48,14 +48,17 @@ app.post('/webhook/', function (req, res) {
             continue
         }
           else if (text.includes("website") ||  text.includes('Website')) {
-              sendTextMessage(sender, "This is a bot in your message you said Website. " + "You can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
+              sendTextMessage(sender, "This is a bot built by Wonderful Websites, if your looking for a new website. " + "You can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
           }
           
-          else if (text.includes('price' || 'cost')){
-              sendTextMessage(sender, "This is a bot built by wonderful websites " + "The price of a website depsnds on what is required, you can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
+          else if (text.includes('price' || text.includes'cost')){
+              sendTextMessage(sender, "This is a bot built by wonderful websites " + "The price of a website depends on what is required, you can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
+          }          
+          else if (text.includes('sell' || text.includes'products')){
+              sendTextMessage(sender, "This is a bot built by wonderful websites " + "If you're looking for an ecommerce website to sell products you can find more information here,  https://wonderfulwebsites.ie/E-Commerce-Website-Design-Dublin.html" )
           }
           else{
-        sendTextMessage(sender, "Thank you, for your Message: " + text.substring(0, 200))
+        sendTextMessage(sender, "This is a Wonderful Websites Boot.  Thank you, for your Message: " + text.substring(0, 200) + '. I dont have a built response, someone will contact you soon')
         }
       }
       if (event.postback) {
