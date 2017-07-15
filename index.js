@@ -57,9 +57,9 @@ app.post('/webhook/', function (req, res) {
           else if (text.includes('sell' || text.includes'products')){
               sendTextMessage(sender, "This is a bot built by wonderful websites " + "If you're looking for an ecommerce website to sell products you can find more information here,  https://wonderfulwebsites.ie/E-Commerce-Website-Design-Dublin.html" )
           }
-          else{
-        sendTextMessage(sender, "This is a Wonderful Websites Bot.  Thank you for your Message: " + text.substring(0, 200) + ". I dont have a built response, someone will contact you soon")
-        }
+
+        sendTextMessage(sender, "This is a Wonderful Websites Bot.  Thank you for your Message: " + text.substring(0, 200))
+  
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
