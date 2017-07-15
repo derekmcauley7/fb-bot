@@ -48,16 +48,16 @@ app.post('/webhook/', function (req, res) {
             continue
         }
           else if (text.includes("website") ||  text.includes('Website')) {
-              sendTextMessage(sender, "This is a bot, if you're looking for a website " + "you can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
+              sendTextMessage(sender, "This is a Wonderful Websites bot, if you're looking for a website " + "you can request a free mock up website here https://wonderfulwebsites.ie/mockup.html" )
               continue
           }          
           
           else if (text.includes("price") ||  text.includes('sell')) {
-              sendTextMessage(sender, "This is a bot. " + "If you're looking to buy and sell products online, you can find out more about our E-commerce Website Design here  https://wonderfulwebsites.ie/E-Commerce-Website-Design-Dublin.html" )
+              sendTextMessage(sender, "This is a Wonderful Websites bot. " + "If you're looking to buy and sell products online, you can find out more about our E-commerce Website Design here  https://wonderfulwebsites.ie/E-Commerce-Website-Design-Dublin.html" )
               continue
           }
           else{
-              sendTextMessage(sender, "Thank you, I am a bot. I dont have a reply for for your Message: " + text.substring(0, 200) + ". Someone will contact you soon.")
+              sendTextMessage(sender, "Thank you, I am a Wonderful Websites bot. I dont have a reply for for your Message: " + text.substring(0, 200) + ". Someone will contact you soon.")
             continue
               
           }
