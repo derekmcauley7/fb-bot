@@ -1,0 +1,30 @@
+{
+  "name": "fb-bot-heroku",
+  "version": "0.5.0",
+  "description": "A Facebook Messenger bot built to work with heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "hahaha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonbrown/fb-bot-heroku.git"
+  },
+  "keywords": [
+    "facebook",
+    "bot",
+    "messenger",
+    "heroku",
+    "express",
+    "node",
+    "javascript"
+  ],
+  "author": "Derek McAuley",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {}
+}
