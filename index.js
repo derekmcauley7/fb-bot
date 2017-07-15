@@ -47,7 +47,7 @@ app.post('/webhook/', function (req, res) {
             sendGenericMessage(sender)
             continue
         }
-          else if (text === 'Website') {
+          else if (text.includes("website") ||  text.includes('Website')) {
               sendTextMessage(sender, "Website 42 " + text.substring(0, 200))
           }
         sendTextMessage(sender, "Thank you, for your Message: " + text.substring(0, 200))
