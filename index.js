@@ -28,7 +28,7 @@ app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === vtoken) {
         res.send(req.query['hub.challenge'])
     }
-    res.send('Hello...')
+    res.send(vtoken)
 })
 
 // Server log and port
